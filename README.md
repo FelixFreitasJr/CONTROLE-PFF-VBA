@@ -1,51 +1,64 @@
-# Projeto Controle de Máscaras N95/PFF
+# CONTROLE-PFF-VBA
 
-Este projeto foi criado para ajudar a controlar a distribuição de máscaras N95/PFF em um hospital durante a pandemia de COVID-19. O objetivo era evitar o desperdício de máscaras, que estavam em falta na época.
+Sistema de controle de entrega e racionamento de máscaras N95 para profissionais de saúde, desenvolvido em Excel VBA durante a pandemia de COVID-19.
 
-## Sobre o Projeto
+## 🏥 Sobre o Projeto
 
-O projeto começou como uma simples planilha do Excel, mas evoluiu para incluir funcionalidades de VBA. A interface inclui um relógio automático com a data atual e um campo de texto para inserir o CPF do funcionário que vai retirar a máscara.
+Este projeto nasceu de uma necessidade real no ambiente hospitalar durante o início da pandemia de COVID-19, quando as máscaras N95 estavam escassas. Desenvolvi esta solução para registrar, controlar e racionar a distribuição das máscaras entre os profissionais, garantindo equidade e segurança a todos.
 
-Ao inserir o CPF, o sistema busca na planilha de cadastro e retorna os dados do CPF, que são: NOME, EMPRESA e FUNÇÃO. Ao lado desses dados, aparecem os dados da última retirada do CPF, que são: data da última retirada e o status (dentro ou fora do prazo).
+Foi meu primeiro contato prático com programação. Com curiosidade, estudei VBA e criei as automações a partir do zero.
 
-Há também um campo para justificativa, com opções pré-definidas, que é usado se o profissional estiver pegando a máscara antes do prazo de 15 dias. Quando o cadastro é novo ou para um paciente, informamos "colaborador novo" e/ou "visitante" para indicar no relatório que a saída foi para terceiros e não para os profissionais do hospital.
+## ✨ Funcionalidades
 
-A retirada é registrada em uma planilha que serve como banco de dados para as retiradas (Planilha 3 - Controle) e o projeto também tem uma função de salvar a cada registro para evitar erros e perdas de dados.
+- **Cadastro de profissionais:** Registra CPF, nome, setor e função.
+- **Controle de retiradas:** Consulta e registra cada retirada de máscara, com data, horário e profissional responsável.
+- **Gestão de prazos:** Calcula automaticamente se o profissional já pode receber uma nova máscara, com base na última retirada.
+- **Atualização de dados:** Permite edição e atualização de informações dos profissionais.
+- **Interface via formulários VBA:** Tudo integrado à planilha Excel.
+- **Facilidade de uso:** Basta abrir o arquivo Excel e habilitar macros.
 
-## Interface do Usuário
+## 💡 Tecnologias Utilizadas
 
-A interface do usuário foi projetada para ser intuitiva e fácil de usar. Aqui estão os principais componentes:
+- Microsoft Excel
+- VBA (Visual Basic for Applications)
 
-### Cabeçalho
+## 📁 Estrutura Recomendada de Pastas
 
-O cabeçalho é verde e exibe os logotipos e o texto relacionados ao "Ministério da Saúde", "FIOCRUZ Fundação Oswaldo Cruz" e "INI Evandro Chagas". O título em letras grandes indica “CENTRO HOSPITALAR COVID-19” seguido pela indicação da localização e a data/hora.
+Sugestão de organização para facilitar o entendimento:
 
-### Ícones de Função
+```
+CONTROLE-PFF-VBA/
+├── docs/              # Documentação, prints, histórico, relatos de uso
+├── planilha/          # Arquivo(s) .xlsm principal(is)
+├── vba/               # Módulos ou trechos de código VBA exportados (.bas, .frm, .cls)
+├── exemplos/          # Exemplos de uso, dados fictícios ou templates
+└── README.md
+```
 
-Abaixo das informações do cabeçalho, existem ícones para diferentes funções:
+> **Dica:** Com o tempo, tente exportar os módulos VBA do Excel para a pasta `/vba` para facilitar o versionamento e leitura do código.
 
-- **Relatórios**: Acesso aos relatórios gerados pelo sistema.
-- **Gerenciamento**: Acesso às planilhas e aos arquivos VBA, protegido por senha.
-- **Informativo**: Indica as mudanças no formulário de acordo com a versão. Atual 3.7.
-- **Fechar**: Fecha o "sistema", acionando uma macro que salva o projeto para evitar perda de dados.
+## 🚀 Como Usar
 
-Antes do campo do CPF, existem mais ícones de função:
+1. Baixe ou clone este repositório.
+2. Abra o arquivo `.xlsm` em Microsoft Excel.
+3. Habilite as macros para pleno funcionamento.
+4. Siga as instruções nos formulários para cadastrar profissionais, registrar retiradas e consultar históricos.
 
-- **Limpar**: Apaga os dados da busca, caso desista de fazer a retirada ou apenas pesquisar o status do CPF para a retirada.
-- **Cadastro Novo**: Só é acionado se o CPF for informado. O campo do CPF segue a lógica da Receita Federal, evitando o cadastro de CPF inválido e/ou errado.
-- **Três Pontos**: Abre um outro formulário que permite a busca mais avançada, por nome, empresa e função.
+## 👀 Exemplos de Tela
 
-Ao lado da justificativa, existe o botão de dispensa, para registrar a saída da máscara e gravar no banco de dados.
+![alt text](image.png)
 
-### Informações do Usuário
+## 🙏 Agradecimentos
 
-No canto inferior esquerdo, há um texto indicando que o usuário. Isso permite ao usuário confirmar que está conectado com a conta correta.
+Agradeço aos colegas do hospital pela confiança e ao desafio que me motivou a aprender programação na prática.
 
-## Contribuições
+## 📬 Contato
 
-Este é um projeto pessoal e não estou buscando contribuições no momento. No entanto, se você tiver alguma sugestão ou feedback, sinta-se à vontade para me enviar uma mensagem.
+Fique à vontade para sugerir melhorias ou tirar dúvidas:
 
-## Contato
+- [GitHub](https://github.com/FelixFreitasJr)
+- [LinkedIn](https://www.linkedin.com/in/seu-linkedin) <!-- Substitua pelo seu LinkedIn -->
 
-Se você tiver alguma dúvida sobre este projeto, sinta-se à vontade para me enviar uma mensagem.
+---
 
+Feito com dedicação e curiosidade por **Felix Freitas Jr**
